@@ -3,6 +3,39 @@
 	<head></head>
 	<body>
 		<h1>Rosetown Pioneers</h1>
-		{{ object_list }}
+		<table border=1 cellpadding=7>
+			<tr>
+				<th>Grantor</th>
+				<th>Grantee</th>
+				<th>Book</th>
+				<th>Page</th>
+				<th>Instrument</th>
+				<th>Month</th>
+				<th>Day</th>
+				<th>Year</th>
+				<th>Time</th>
+				<th>District</th>
+				<th>Lot</th>
+				<th>Location</th>
+				<th>Address</th>
+			</tr>
+				{% for obj in object_list %}
+			<tr>
+				<td>{{ obj.grantor }}</td>
+				<td>{{ obj.grantee }}</td>
+				<td>{{ obj.book }}</td>
+				<td>{{ obj.page }}</td>
+				<td>{{ obj.instrument }}</td>
+				<td>{{ obj.recd_mo }}</td>
+				<td>{{ obj.recd_day }}</td>
+				<td>{{ obj.recd_yr }}</td>
+				<td>{{ obj.recd_time }}</td>
+				<td>{{ obj.dist }}</td>
+				<td>{{ obj.lot }}</td>
+				<td>{{ obj.loc }}</td>
+				<td>{{ obj.address }}</td>
+			</tr>
+			{% endfor %}
+		</table>
 	</body>
-	</html>
+</html>
