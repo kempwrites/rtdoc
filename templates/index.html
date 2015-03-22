@@ -5,6 +5,7 @@
 		<h1>Rosetown Pioneers</h1>
 		<table border=1 cellpadding=7>
 			<tr>
+				<th></th>
 				<th>Grantor</th>
 				<th>Grantee</th>
 				<th>Book</th>
@@ -21,6 +22,7 @@
 			</tr>
 				{% for obj in object_list %}
 			<tr>
+				<td>{{ obj.row_id }}</td>
 				<td>{{ obj.grantor }}</td>
 				<td>{{ obj.grantee }}</td>
 				<td>{{ obj.book }}</td>
